@@ -1,18 +1,8 @@
 import React from 'react';
-import { Router, Route, IndexRedirect } from 'dva/router';
+import {Router, Route, IndexRedirect} from 'dva/router';
 import Login from './Login';
 
-export const routes = (
-  <Route path="/">
-    <IndexRedirect to="/login" />
-    <Route path="login" component={Login} />
-  </Route>
+export default (
+  <Route path="login" component={Login}/>
 );
 
-export function RouterConfig({ history }) {
-  return (
-    <Router history={history}>
-      { routes }
-    </Router>
-  );
-}

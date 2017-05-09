@@ -1,5 +1,5 @@
 import dva from 'dva';
-import { hashHistory } from 'dva/router';
+import {hashHistory} from 'dva/router';
 import '../views/Shared/Shared.css';
 
 // 1. Initialize
@@ -14,7 +14,7 @@ const app = dva({
 app.model(require('../models/navigationBar'));
 
 // 4. Router
-app.router(require('../views/Home/router').RouterConfig);
+app.router(require('../views/routerConfig').RouterConfig);
 
 // 5. Start
 app.start('#root');

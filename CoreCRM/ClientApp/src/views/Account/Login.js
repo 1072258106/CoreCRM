@@ -62,4 +62,4 @@ Login.propTypes = {
   dispatch: PropTypes.func,
 };
 
-export default connect(state => ({ loading: state.loading.models.account }))(Form.create()(Login));
+export default connect(state => ({ loading: false }))(Form.create()(Login));
